@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>card-lint — 角色卡体检</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>card-lint</h1>
+        <p>角色卡体检检视器 · 解析全部在浏览器本地完成，卡片不会上传</p>
+      </header>
+
+      <section id="drop" tabindex="0">
+        <p>把 .png / .json 角色卡拖到这里</p>
+        <p><label for="file">或点击选择文件</label></p>
+        <input id="file" type="file" accept=".png,.json,image/png,application/json" hidden />
+      </section>
+
+      <section id="report" hidden>
+        <div id="preview"></div>
+        <div id="issues"></div>
+        <div id="actions">
+          <button id="export-json" type="button">导出 JSON</button>
+          <button id="export-png" type="button">导出 PNG</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
